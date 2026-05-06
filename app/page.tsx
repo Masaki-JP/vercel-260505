@@ -29,6 +29,12 @@ export default function Home() {
         </Link>
         <Link
           className="font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900"
+          href="/simple-state-sample"
+        >
+          簡単な状態遷移サンプルへ移動
+        </Link>
+        <Link
+          className="font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900"
           href="/redirect-sample"
         >
           redirect サンプルへ移動
