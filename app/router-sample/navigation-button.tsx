@@ -6,7 +6,7 @@ export function NavigationButton() {
   const router = useRouter();
 
   function handleClick() {
-    const shouldRedirectToError = Math.random() < 0.1;
+    const shouldRedirectToError = Math.random() < 0.5;
 
     if (shouldRedirectToError) {
       router.push("/error");
