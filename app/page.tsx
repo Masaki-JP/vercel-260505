@@ -11,9 +11,9 @@ export default function Home() {
       <nav className="mt-8 flex flex-wrap gap-4">
         <Link
           className="font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900"
-          href="/about"
+          href="/mypage"
         >
-          About へ移動
+          MyPage へ移動
         </Link>
         <Link
           className="font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900"
