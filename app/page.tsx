@@ -17,15 +17,15 @@ export default function Home() {
         </Link>
         <Link
           className="font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900"
-          href="/contact"
-        >
-          Contact へ移動
-        </Link>
-        <Link
-          className="font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900"
           href="/router-sample"
         >
           useRouter サンプルへ移動
+        </Link>
+        <Link
+          className="font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900"
+          href="/redirect-sample"
+        >
+          redirect サンプルへ移動
         </Link>
       </nav>
     </main>
