@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { NavigationButton } from "./navigation-button";
 
 export default function RouterSamplePage() {
