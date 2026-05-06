@@ -2,22 +2,13 @@
 
 import { useState } from "react";
 
-/**
- * 状態遷移サンプルで扱う状態の識別子です。
- */
 type StateId = "draft" | "review" | "approved" | "rejected";
 
-/**
- * ある状態から別の状態へ移るための遷移定義です。
- */
 type Transition = {
   label: string;
   to: StateId;
 };
 
-/**
- * 各状態に対応する表示名と説明文です。
- */
 const states: Record<StateId, { label: string; description: string }> = {
   draft: {
     label: "下書き",
@@ -37,9 +28,6 @@ const states: Record<StateId, { label: string; description: string }> = {
   },
 };
 
-/**
- * 現在の状態ごとに、次に選択できる遷移を定義します。
- */
 const transitions: Record<StateId, Transition[]> = {
   draft: [{ label: "レビューへ進める", to: "review" }],
   review: [
@@ -50,25 +38,16 @@ const transitions: Record<StateId, Transition[]> = {
   rejected: [{ label: "修正して再提出", to: "draft" }],
 };
 
-/**
- * ボタン操作で状態を切り替え、現在の状態と遷移履歴を表示するデモです。
- */
 export function StateTransitionDemo() {
   const [currentState, setCurrentState] = useState<StateId>("draft");
   const [history, setHistory] = useState<StateId[]>(["draft"]);
   const availableTransitions = transitions[currentState];
 
-  /**
-   * 指定された次の状態へ遷移し、履歴にも追加します。
-   */
   function moveTo(nextState: StateId) {
     setCurrentState(nextState);
     setHistory((previousHistory) => [...previousHistory, nextState]);
   }
 
-  /**
-   * 現在の状態と履歴を初期状態に戻します。
-   */
   function reset() {
     setCurrentState("draft");
     setHistory(["draft"]);
