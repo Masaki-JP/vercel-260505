@@ -6,6 +6,7 @@ const pages = [
   { href: "/state-sample", label: "状態遷移サンプル" },
   { href: "/simple-state-sample", label: "簡単な状態遷移サンプル" },
   { href: "/redirect-sample", label: "redirect サンプル" },
+  { href: "/practice", label: "Practice" },
 ];
 
 export default function Home() {
