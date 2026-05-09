@@ -7,7 +7,8 @@ const pages = [
   { href: "/simple-state-sample", label: "簡単な状態遷移サンプル" },
   { href: "/redirect-sample", label: "redirect サンプル" },
   { href: "/practice", label: "Practice" },
-  { href: "/api/user", label: "API(user)" }
+  { href: "/api/user", label: "API(user)" },
+  { href: "use-effect-sample", label: "useEffectサンプル" },
 ];
 
 export default function Home() {
