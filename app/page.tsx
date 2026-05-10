@@ -9,7 +9,8 @@ const pages = [
   { href: "/practice", label: "Practice" },
   { href: "/api/user", label: "API(user)" },
   { href: "use-effect-sample", label: "useEffectサンプル" },
-  { href: "local-storage-sample", label: "localStorageサンプル" }
+  { href: "local-storage-sample", label: "localStorageサンプル" },
+  { href: "sqlite-prisma-sample", label: "SQLite & Prisma" },
 ];
 
 export default function Home() {
