@@ -11,6 +11,7 @@ const pages = [
   { href: "use-effect-sample", label: "useEffectサンプル" },
   { href: "local-storage-sample", label: "localStorageサンプル" },
   { href: "sqlite-prisma-sample", label: "SQLite & Prisma" },
+  { href: "use-ref-sample", label: "useRefサンプル" },
 ];
 
 export default function Home() {
