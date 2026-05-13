@@ -15,6 +15,7 @@ const pages = [
   { href: "use-memo-sample", label: "useMemoサンプル" },
   { href: "memo-sample", label: "memoサンプル" },
   { href: "memo-sample2", label: "memoサンプル2" },
+  { href: "memo-bad-sample", label: "memoサンプル（悪い例）" },
 ];
 
 export default function Home() {
