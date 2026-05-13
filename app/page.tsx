@@ -13,6 +13,7 @@ const pages = [
   { href: "sqlite-prisma-sample", label: "SQLite & Prisma" },
   { href: "use-ref-sample", label: "useRefサンプル" },
   { href: "use-memo-sample", label: "useMemoサンプル" },
+  { href: "memo-sample", label: "memoサンプル" },
 ];
 
 export default function Home() {
