@@ -4,6 +4,7 @@ import { useRef, useState } from "react"
 
 // useRef：再描画の力はない。でも、再描画耐性はある。
 
+/* eslint-disable react-hooks/immutability -- 悪い例として、useRefを使わずローカル変数を変更するコードを意図的に残しています。 */
 function Comp1() {
     let count = 0
 
@@ -16,6 +17,7 @@ function Comp1() {
         </button>
     )
 }
+/* eslint-enable react-hooks/immutability */
 
 function Comp2() {
     const countRef = useRef(0)
