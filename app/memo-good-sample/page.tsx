@@ -35,7 +35,7 @@ export default function Page() {
 }
 
 const Child1 = memo(function Child1({ fn }: { fn: () => void }) {
-    console.log("🟦 Child1 rendered")
+    console.log("🟦 Child1 rendered", fn)
 
     return <button>Child1</button>
 })
@@ -43,7 +43,7 @@ const Child1 = memo(function Child1({ fn }: { fn: () => void }) {
 type Obj = { str: string }
 
 const Child2 = memo(function Child2({ obj }: { obj: Obj }) {
-    console.log("🟨 Child2 rendered")
+    console.log("🟨 Child2 rendered", obj)
 
     return <p>Child2</p>
 })
