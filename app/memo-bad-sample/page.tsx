@@ -2,7 +2,7 @@
 
 import { memo, useState } from "react"
 
-export default () => {
+export default function Page() {
     console.log("🟥 Parent rendered")
 
     const [count, setCount] = useState(1)
@@ -22,16 +22,16 @@ export default () => {
     </main>
 }
 
-const Child1 = memo(({ fn }: { fn: () => void }) => {
-    console.log("🟦 Child1 rendered")
+const Child1 = memo(function Child1({ fn }: { fn: () => void }) {
+    console.log("🟦 Child1 rendered", fn)
 
     return <p>Child1</p>
 })
 
 type Obj = { str: string }
 
-const Child2 = memo(({ obj }: { obj: Obj }) => {
-    console.log("🟨 Child2 rendered")
+const Child2 = memo(function Child2({ obj }: { obj: Obj }) {
+    console.log("🟨 Child2 rendered", obj)
 
     return <p>Child2</p>
 })
