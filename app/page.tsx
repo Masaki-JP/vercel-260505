@@ -10,7 +10,6 @@ const pages = [
   { href: "/api/user", label: "API(user)" },
   { href: "use-effect-sample", label: "useEffectサンプル" },
   { href: "local-storage-sample", label: "localStorageサンプル" },
-  { href: "sqlite-prisma-sample", label: "SQLite & Prisma" },
   { href: "use-ref-sample", label: "useRefサンプル" },
   { href: "use-memo-sample", label: "useMemoサンプル" },
   { href: "use-callback-sample", label: "useCallbackサンプル" },
