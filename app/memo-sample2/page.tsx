@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Comp from "./Comp";
 
-export default () => {
+export default function Page() {
     const [count, setCount] = useState(1)
 
     console.log("🟥 Parent rendered")
