@@ -45,6 +45,7 @@ function Comp1() {
   </p>
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- useMemoなしの比較用として、切り替えて試せるように残しています。
 function Comp2() {
   const result = heavyCalculation(8594325483, 2537289867, 7519716732).toString()
 
