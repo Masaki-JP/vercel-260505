@@ -15,7 +15,7 @@ export default function Page() {
 
   const getUsers = async () => {
     const response: Response = await fetch("/api/users")
-    const data: any = await response.json()
+    const data: User[] = await response.json()
 
     setUsers(data)
   }
