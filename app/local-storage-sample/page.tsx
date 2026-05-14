@@ -13,15 +13,15 @@ export default function LocalStorageSample() {
 }
 
 function Count() {
-    const [count, setCount] = useState<number | null>(null)
-
-    useEffect(() => {
-        const count: string | null = localStorage.getItem("count")
-
-        if (count !== null) {
-            setCount(Number(count))
+    const [count, setCount] = useState<number | null>(() => {
+        if (typeof window === "undefined") {
+            return null
         }
-    }, [])
+
+        const count = localStorage.getItem("count")
+
+        return count === null ? null : Number(count)
+    })
 
     useEffect(() => {
         if (count !== null) {
@@ -51,14 +51,14 @@ function Count() {
 }
 
 function Name() {
-    const [name, setName] = useState<string | null>(null)
+    const [name, setName] = useState<string | null>(() => {
+        if (typeof window === "undefined") {
+            return null
+        }
+
+        return localStorage.getItem("name")
+    })
     const hasSavedName = name !== null && name !== ""
-
-    useEffect(() => {
-        const name: string | null = localStorage.getItem("name")
-
-        setName(name)
-    }, [])
 
     return <>
         <form
