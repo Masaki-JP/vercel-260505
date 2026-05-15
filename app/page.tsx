@@ -18,6 +18,7 @@ const pages = [
   { href: "memo-bad-sample", label: "memoサンプル（悪い例）" },
   { href: "memo-good-sample", label: "memoサンプル（良い例）" },
   { href: "use-context-sample", label: "useContextサンプル" },
+  { href: "link-context-sample/page-a", label: "Link + useContextサンプル" },
 ];
 
 export default function Home() {
