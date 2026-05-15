@@ -13,7 +13,7 @@ export function NavigationButton() {
       return;
     }
 
-    router.push("/mypage");
+    router.push("/my-page");
   }
 
   return (

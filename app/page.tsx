@@ -18,7 +18,7 @@ const pages = [
   { href: "/simple-state-sample", label: "簡単な状態遷移サンプル" },
   { href: "/state-sample", label: "状態遷移サンプル" },
   { href: "/router-sample", label: "useRouter サンプル" },
-  { href: "/mypage", label: "MyPage" },
+  { href: "/my-page", label: "MyPage" },
 ];
 
 export default function Home() {
