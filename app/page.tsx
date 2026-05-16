@@ -8,6 +8,7 @@ const pages = [
   { href: "memo-sample2", label: "memoサンプル2" },
   { href: "memo-sample", label: "memoサンプル" },
   { href: "use-callback-sample", label: "useCallbackサンプル" },
+  { href: "use-reducer-sample", label: "useReducerサンプル" },
   { href: "use-memo-sample", label: "useMemoサンプル" },
   { href: "use-ref-sample", label: "useRefサンプル" },
   { href: "local-storage-sample", label: "localStorageサンプル" },
