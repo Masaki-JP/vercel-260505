@@ -7,24 +7,28 @@ type State = {
 }
 
 type Action =
-  | { type: "increment" }
-  | { type: "decrement" }
+  | { type: "increment", amount: number }
+  | { type: "decrement", amount: number }
   | { type: "reset" }
 
 const initialState: State = {
   count: 0,
 }
 
+function assertNever(value: never): never {
+  throw new Error(`Unexpected action: ${JSON.stringify(value)}`)
+}
+
 function reducer(state: State, action: Action): State {
   switch (action.type) {
     case "increment":
-      return { count: state.count + 1 }
+      return { count: state.count + action.amount }
     case "decrement":
-      return { count: state.count - 1 }
+      return { count: state.count - action.amount }
     case "reset":
       return initialState
     default:
-      return state
+      return assertNever(action)
   }
 }
 
@@ -47,15 +51,39 @@ export default function UseReducerSamplePage() {
         <div className="mt-6 flex flex-wrap gap-3">
           <button
             className="rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
-            onClick={() => dispatch({ type: "increment" })}
+            onClick={() => dispatch({ type: "increment", amount: 1 })}
           >
             +1
           </button>
           <button
+            className="rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
+            onClick={() => dispatch({ type: "increment", amount: 2 })}
+          >
+            +2
+          </button>
+          <button
+            className="rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
+            onClick={() => dispatch({ type: "increment", amount: 3 })}
+          >
+            +3
+          </button>
+          <button
             className="rounded bg-slate-700 px-4 py-2 font-semibold text-white hover:bg-slate-800"
-            onClick={() => dispatch({ type: "decrement" })}
+            onClick={() => dispatch({ type: "decrement", amount: 1 })}
           >
             -1
+          </button>
+          <button
+            className="rounded bg-slate-700 px-4 py-2 font-semibold text-white hover:bg-slate-800"
+            onClick={() => dispatch({ type: "decrement", amount: 2 })}
+          >
+            -2
+          </button>
+          <button
+            className="rounded bg-slate-700 px-4 py-2 font-semibold text-white hover:bg-slate-800"
+            onClick={() => dispatch({ type: "decrement", amount: 3 })}
+          >
+            -3
           </button>
           <button
             className="rounded border border-slate-300 px-4 py-2 font-semibold hover:bg-slate-100"
