@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, type Dispatch, type ReactNode, type SetStateAction, useContext, useState } from "react";
+import { createContext, type Dispatch, type ReactNode, type SetStateAction, useContext, useState } from "react"
 
 type User = { name: string, age: number }
 

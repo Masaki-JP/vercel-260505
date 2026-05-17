@@ -1,5 +1,5 @@
-import { SubPage } from "./comps/subpage";
-import { UserContextProvider } from "./lib/context";
+import { SubPage } from "./comps/subpage"
+import { UserContextProvider } from "./lib/context"
 
 export default function MyPage() {
   return (

@@ -1,4 +1,4 @@
-import { submitName } from "./actions";
+import { submitName } from "./actions"
 
 export default function RedirectSamplePage() {
   return (
@@ -30,5 +30,5 @@ export default function RedirectSamplePage() {
         </button>
       </form>
     </main>
-  );
+  )
 }

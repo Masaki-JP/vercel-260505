@@ -1,4 +1,4 @@
-import { SimpleStateDemo } from "./simple-state-demo";
+import { SimpleStateDemo } from "./simple-state-demo"
 
 export default function SimpleStateSamplePage() {
   return (
@@ -10,5 +10,5 @@ export default function SimpleStateSamplePage() {
 
       <SimpleStateDemo />
     </main>
-  );
+  )
 }

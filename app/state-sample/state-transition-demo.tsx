@@ -1,15 +1,15 @@
-"use client";
+"use client"
 
-import { useState } from "react";
+import { useState } from "react"
 
-type StateId = "draft" | "review" | "approved" | "rejected";
+type StateId = "draft" | "review" | "approved" | "rejected"
 
 type Transition = {
-  label: string;
-  to: StateId;
-};
+  label: string
+  to: StateId
+}
 
-const states: Record<StateId, { label: string; description: string }> = {
+const states: Record<StateId, { label: string, description: string }> = {
   draft: {
     label: "下書き",
     description: "内容を作成している状態です。",
@@ -26,7 +26,7 @@ const states: Record<StateId, { label: string; description: string }> = {
     label: "差し戻し",
     description: "修正が必要になった状態です。",
   },
-};
+}
 
 const transitions: Record<StateId, Transition[]> = {
   draft: [{ label: "レビューへ進める", to: "review" }],
@@ -36,21 +36,21 @@ const transitions: Record<StateId, Transition[]> = {
   ],
   approved: [{ label: "最初からやり直す", to: "draft" }],
   rejected: [{ label: "修正して再提出", to: "draft" }],
-};
+}
 
 export function StateTransitionDemo() {
-  const [currentState, setCurrentState] = useState<StateId>("draft");
-  const [history, setHistory] = useState<StateId[]>(["draft"]);
-  const availableTransitions = transitions[currentState];
+  const [currentState, setCurrentState] = useState<StateId>("draft")
+  const [history, setHistory] = useState<StateId[]>(["draft"])
+  const availableTransitions = transitions[currentState]
 
   function moveTo(nextState: StateId) {
-    setCurrentState(nextState);
-    setHistory((previousHistory) => [...previousHistory, nextState]);
+    setCurrentState(nextState)
+    setHistory((previousHistory) => [...previousHistory, nextState])
   }
 
   function reset() {
-    setCurrentState("draft");
-    setHistory(["draft"]);
+    setCurrentState("draft")
+    setHistory(["draft"])
   }
 
   return (
@@ -110,5 +110,5 @@ export function StateTransitionDemo() {
         </ol>
       </div>
     </section>
-  );
+  )
 }

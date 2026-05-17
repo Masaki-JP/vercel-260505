@@ -1,19 +1,19 @@
-"use client";
+"use client"
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"
 
 export function NavigationButton() {
-  const router = useRouter();
+  const router = useRouter()
 
   function handleClick() {
-    const shouldRedirectToError = Math.random() < 0.5;
+    const shouldRedirectToError = Math.random() < 0.5
 
     if (shouldRedirectToError) {
-      router.push("/error");
-      return;
+      router.push("/error")
+      return
     }
 
-    router.push("/my-page");
+    router.push("/my-page")
   }
 
   return (
@@ -24,5 +24,5 @@ export function NavigationButton() {
     >
       ボタンで画面遷移する
     </button>
-  );
+  )
 }

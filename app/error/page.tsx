@@ -6,5 +6,5 @@ export default function ErrorPage() {
         useRouter サンプルのボタンで、50% の確率に当たったときに表示されるページです。
       </p>
     </main>
-  );
+  )
 }

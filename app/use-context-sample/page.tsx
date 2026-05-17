@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import Child from "./_components/Child";
-import { CountContext } from "./_lib/count-context";
+import Child from "./_components/Child"
+import { CountContext } from "./_lib/count-context"
 
 export default function Page() {
   return (
@@ -12,5 +12,5 @@ export default function Page() {
         <Child />
       </main>
     </CountContext.Provider>
-  );
+  )
 }

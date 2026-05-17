@@ -1,14 +1,17 @@
-"use client";
+"use client"
 
-import { memo, useCallback, useState } from "react";
+import { memo, useCallback, useState } from "react"
 
-type ChildProps = { count: number; onClick: () => void };
+type ChildProps = {
+  count: number
+  onClick: () => void
+}
 
 const Child = memo(function Child({
   count,
   onClick,
 }: ChildProps) {
-  console.log("Child が再描画されました");
+  console.log("Child が再描画されました")
 
   return (
     <div className="rounded-lg border border-slate-300 p-6">
@@ -20,18 +23,18 @@ const Child = memo(function Child({
         カウントを増やす
       </button>
     </div>
-  );
-});
+  )
+})
 
 export default function Page() {
-  console.log("🟥 Parent rendered");
+  console.log("🟥 Parent rendered")
 
-  const [count, setCount] = useState(0);
-  const [text, setText] = useState("");
+  const [count, setCount] = useState(0)
+  const [text, setText] = useState("")
 
   const increment = useCallback(() => {
-    setCount((prevCount) => prevCount + 1);
-  }, []);
+    setCount((prevCount) => prevCount + 1)
+  }, [])
 
   return (
     <main className="mx-auto flex max-w-2xl flex-col gap-6 px-6 py-12">
@@ -55,5 +58,5 @@ export default function Page() {
 
       <Child count={count} onClick={increment} />
     </main>
-  );
+  )
 }

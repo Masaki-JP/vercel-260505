@@ -1,4 +1,4 @@
-import { StateTransitionDemo } from "./state-transition-demo";
+import { StateTransitionDemo } from "./state-transition-demo"
 
 export default function StateSamplePage() {
   return (
@@ -11,5 +11,5 @@ export default function StateSamplePage() {
 
       <StateTransitionDemo />
     </main>
-  );
+  )
 }

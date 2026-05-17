@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { useState } from "react";
+import { useState } from "react"
 
-type Status = "stopped" | "running";
+type Status = "stopped" | "running"
 
 const statusLabels: Record<Status, string> = {
   stopped: "停止中",
   running: "実行中",
-};
+}
 
 export function SimpleStateDemo() {
-  const [status, setStatus] = useState<Status>("stopped");
-  const nextStatus: Status = status === "stopped" ? "running" : "stopped";
+  const [status, setStatus] = useState<Status>("stopped")
+  const nextStatus: Status = status === "stopped" ? "running" : "stopped"
 
   return (
     <section className="mt-8 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
@@ -26,5 +26,5 @@ export function SimpleStateDemo() {
         {statusLabels[nextStatus]}にする
       </button>
     </section>
-  );
+  )
 }

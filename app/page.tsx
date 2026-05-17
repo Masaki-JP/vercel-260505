@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 
 const pages = [
   { href: "link-context-sample/page-a", label: "Link + useContextサンプル" },
@@ -21,7 +21,7 @@ const pages = [
   { href: "/router-sample", label: "useRouter サンプル" },
   { href: "/search-params-sample", label: "searchParams サンプル" },
   { href: "/my-page", label: "MyPage" },
-];
+]
 
 export default function Home() {
   return (
@@ -41,5 +41,5 @@ export default function Home() {
         ))}
       </ul>
     </main>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import GrandChild from "./GrandChild";
+import GrandChild from "./GrandChild"
 
 export default function Child() {
   return (
@@ -7,5 +7,5 @@ export default function Child() {
 
       <GrandChild />
     </>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 
 const pages: { href: string, label: string }[] = [
     { href: "/practice/useState1", label: "useState1" },

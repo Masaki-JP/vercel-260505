@@ -1,7 +1,7 @@
 "use client"
 
-import { useState } from "react";
-import Comp from "./Comp";
+import { useState } from "react"
+import Comp from "./Comp"
 
 export default function Page() {
     const [count, setCount] = useState(1)

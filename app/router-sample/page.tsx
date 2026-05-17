@@ -1,4 +1,4 @@
-import { NavigationButton } from "./navigation-button";
+import { NavigationButton } from "./navigation-button"
 
 export default function RouterSamplePage() {
   return (
@@ -12,5 +12,5 @@ export default function RouterSamplePage() {
         <NavigationButton />
       </div>
     </main>
-  );
+  )
 }

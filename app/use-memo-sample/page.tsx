@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { useMemo, useState } from "react";
+import { useMemo, useState } from "react"
 
 function heavyCalculation(a: number, b: number, c: number) {
   let result = 0
