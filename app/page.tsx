@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 const pages = [
+  { href: "/create-portal-sample", label: "createPortalサンプル" },
   { href: "link-context-sample/page-a", label: "Link + useContextサンプル" },
   { href: "use-context-sample", label: "useContextサンプル" },
   { href: "memo-good-sample", label: "memoサンプル（良い例）" },
