@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 const pages = [
+  { href: "/use-imperative-handle-sample", label: "useRef + useImperativeHandleサンプル" },
   { href: "/create-portal-sample", label: "createPortalサンプル" },
   { href: "link-context-sample/page-a", label: "Link + useContextサンプル" },
   { href: "use-context-sample", label: "useContextサンプル" },
